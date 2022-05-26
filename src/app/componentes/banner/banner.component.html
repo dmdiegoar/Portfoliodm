@@ -1,0 +1,19 @@
+<div >
+
+    <div class="contenedor-imagen1"> 
+      
+
+            <img src={{imgbanner}}  alt="logofondo"    id="fondo">
+
+
+            <h1 class="reflejo" *ngIf ="persona"> {{ persona.nombre}}  </h1>
+  
+    </div>
+
+</div>
+
+
+<div class="subirArchivo" *ngIf="authService.logeado" >
+    Cambiar banner:
+    <input type="file" (change)="subir_archivo($event)">
+</div>

@@ -1,0 +1,105 @@
+
+<div class="row" id="mod" *ngIf ="persona" >
+
+    <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
+        <img class="img-fluid face" src=  {{persona.fotoPerfil}}  alt="foto" id="cara">
+    </div>
+
+    <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
+        <p>{{persona.nombre}} </p>
+        <p> {{persona.titulo}} </p>
+        <p> {{persona.direccion}}  </p>
+    </div>
+
+    <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8" >
+        <span >
+            <h1>Sobre mi</h1>
+            <p>{{persona.sobremi }} </p>
+            
+            <div class="mod" >  
+                <button data-toggle="modal" data-target="#exampleModal" id="botoe" *ngIf="authService.logeado" (click)="onOpenModal('edit', persona)" > 
+                  <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26"  class="editores" viewBox="0 0 16 16">
+                      <path d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z"/>
+                    </svg>
+                
+                </button>
+            </div>
+    
+        </span>
+    </div>
+
+
+</div>
+
+
+    <!-- Modal para actualizar Persona -->
+    <div class="modal fade" id="updatePersonanModal" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="updatePersonanModal" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Editar datos personales</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form #editForm="ngForm">
+                        
+                        
+                                          
+                        <label for="nombre">Nombre</label><br>
+                        <input ngModel="{{ updatePersona?.nombre}} " type="text" name="nombre"  class="form-control">
+                        <label for="titulo">Título</label><br>
+                        <input ngModel="{{updatePersona?.titulo}}" type="text" name="titulo"  class="form-control">
+                        <label for="direccion">Dirección</label><br>
+                        <input ngModel="{{updatePersona?.direccion}}" type="text" name="direccion"  class="form-control">
+                        <label for="sobremi">Acerda de</label><br>
+                        <input ngModel="{{updatePersona?.sobremi}}" type="text" name="sobremi"  class="form-control">
+                        <label for="fotoPerfil">Url foto de perfil</label><br>
+                        <input ngModel="{{updatePersona?.fotoPerfil}}" type="text" name="fotoPerfil"  class="form-control">
+    
+                        <input type="hidden" name="id" ngModel="{{updatePersona?.id}} "><br>
+      
+                        
+    
+    
+                        <div class="modal-footer">
+                            <button id="update-persona-modal" type="button" class="btn" data-dismiss="modal">Cancelar</button>
+                            <button (click)="onUpdatePersona(editForm.value)" type="button" class="btn" data-dismiss="modal">Guardar cambios</button>
+                        </div>
+                    </form>
+                </div>
+                
+                
+                
+                
+            </div>
+        </div>
+    </div>
+    
+
+
+<!-- Modal -->
+<div class="modal fade" id="esxampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Iniciar sesion</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+        ...
+       
+    
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="submit" class="btn btn-primary"  >send</button>
+        </div>
+      </div>
+    </div>
+    </div>
+    

@@ -1,0 +1,28 @@
+img {
+    width: 100%;
+    height: 190px;
+    margin-top: 1%;
+}
+
+
+
+  
+    
+  
+    .reflejo {
+      -webkit-box-reflect: below 1px -webkit-gradient(linear, left top, left bottom, from(transparent), to(rgba(255, 255, 255, 0.7)));
+     
+       -webkit-text-stroke: 1px rgb(255, 255, 255);  
+      text-align:center;
+      color: #416c8f;
+      font-size: 66px;
+      margin-top: -175px;
+      background-color: unset;
+      
+    
+    }
+
+
+    #fondo {
+      background-color: unset;
+    }

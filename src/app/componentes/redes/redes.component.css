@@ -1,0 +1,15 @@
+svg {
+    width: 50px;
+    align-items: center;
+    
+}
+
+@media (max-whidt: 590px) {
+    
+    #redes {
+        
+        align-items: left;
+        
+    }
+
+}

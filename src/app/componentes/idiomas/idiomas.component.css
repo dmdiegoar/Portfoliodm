@@ -1,0 +1,30 @@
+.row {
+    padding: 20px;
+}
+h1, h3 {
+    display: inline;
+}
+
+
+#temas {
+
+    border-radius: 15px;
+    background: #1a666b;
+    
+    
+  /*  box-shadow: inset 18px 18px 36px #0a292b, inset -18px -18px 36px #2aa3ab; */
+    
+    margin-top: 7px;
+    
+    font-size: 20px;
+    
+    padding: 8px;
+    
+    
+    
+    box-shadow: 38px 38px 76px #002f26,
+                -38px -38px 76px #02bb96;
+    
+
+
+}
