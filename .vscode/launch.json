@@ -7,7 +7,9 @@
       "type": "pwa-chrome",
       "request": "launch",
       "preLaunchTask": "npm: start",
-      "url": "http://localhost:4200/"
+      //"url": "http://localhost:4200/"
+      "url": "https://porfoliodm.herokuapp.com"
+
     },
     {
       "name": "ng test",

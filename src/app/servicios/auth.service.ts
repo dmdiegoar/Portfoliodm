@@ -14,7 +14,9 @@ export class AuthService {
 
 
 //api propia
-apipropia = "http://localhost:8080/login/api";
+//apipropia = "http://localhost:8080/login/api";
+apipropia = "https://porfoliodm.herokuapp.com/login/api";
+
 
   
   ///eve.holt@reqres.in
